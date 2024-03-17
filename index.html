@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+      <div id="first-banner">
+        <div class="heading">
+          <h1>ROCK</h1>
+          <h1>PAPER</h1>
+          <h1>SCISSORS</h1>
+        </div>
+
+        <div class="scores">
+          <div class="computer-score">
+            <p id="s1">COMPUTER SCORE</p>
+            <span id="Score1">0</span>
+          </div>
+          <div class="your-score">
+            <p id="s2">YOUR SCORE</p>
+            <span id="Score2">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="second-banner">
+        <div class="icons">
+          <img
+            src="/images/first.png"
+            alt="rock"
+            id="first-image"
+            onclick="userPicked('rock')"
+          />
+          <img
+            src="/images/second.png"
+            alt="Scissor"
+            id="second-image"
+            onclick="userPicked('scissor')"
+          />
+          <img
+            src="/images/third.png"
+            alt="Paper"
+            id="third-image"
+            onclick="userPicked('paper')"
+          />
+          <div id="hr">
+            <hr id="first-hr" />
+            <hr id="second-hr" />
+            <hr id="third-hr" />
+          </div>
+        </div>
+        <div id="stars">
+          <img src="/images/Starts.png" alt="stars" />
+            <img  id= "trophy" src="/images/cup.png" alt="trophy" />
+          </div>
+
+            <div  class="winner">
+              <p  id="hurray" >HURRAY!!</p>
+              <p id="you-won" >YOU WON THE GAME</p>
+          </div>
+           
+          
+        <p id="close-btn" onclick="closerules()">X</p>
+
+        <button id="rules-btn" onclick="openrules()">RULES</button>
+
+        <div id="game-rules">
+          <h1>Game Rules</h1>
+          <ul class="rules">
+            <li>
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </li>
+
+            <li>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time.
+            </li>
+            <li>
+              If both players lay down the same hand, each player lays down
+              another hand.
+            </li>
+          </ul>
+        </div>
+
+        <div id="second-screen">
+          <img id="userpickedImage" src="" />
+          <div class="lost">
+            <h1>YOU LOSE</h1>
+            <h3>AGAINST PC</h3>
+          </div>
+
+          <div id="tie">
+            <h1>TIE UP</h1>
+          </div>
+          <div class="won">
+            <h1>YOU WON</h1>
+            <h3>AGAINST PC</h3>
+          </div>
+
+          <img id="computerpickedImage" src=""
+        </div>
+
+        <div id="layer1"></div>
+        <div id="layer2"></div>
+        <div id="layer3"></div>
+
+        <div id="layer4"></div>
+        <div id="layer5"></div>
+        <div id="layer6"></div>
+        
+
+        <button id="next-btn" onclick="nextButton()">NEXT</button>
+      </div>
+    </div>
+    <button id="play-again" onclick="resetGame()">PLAY AGAIN</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
